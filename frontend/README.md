@@ -25,9 +25,13 @@ Describe your project
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Feature 1; Lists Tasks
+:heavy_check_mark: Feature 2; Display One Task Detail
+:heavy_check_mark: Feature 3; Update Task Status
+:heavy_check_mark: Feature 4; Delete Task
+:heavy_check_mark: Feature 5; Add New Task
+:heavy_check_mark: Feature 6; Access a Node.js Backend api of Task List management
+
 
 ## :rocket: Technologies ##
 
