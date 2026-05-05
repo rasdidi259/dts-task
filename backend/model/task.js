@@ -4,7 +4,9 @@
  * decription   : Task Schema compiled into a Task Model
  */
 
-const { Joi, mongoose } = require("../config/setupmodules");
+const Joi = require('joi');
+
+const { /*joi,*/  mongoose } = require("../config/setupmodules");
 
 const taskSchema = new mongoose.Schema({
   title:{

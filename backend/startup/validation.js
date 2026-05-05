@@ -7,6 +7,8 @@
 
 const Joi = require('joi');
 
-module.exports = function() {
-    Joi.objectId  = require('joi-objectid')(Joi); // returns a function 
+// const {joi} =require('../config/setupmodules')
+
+module.exports = function () {
+    Joi.objectId = require('joi-objectid')(Joi); // returns a function 
 }

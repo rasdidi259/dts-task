@@ -1,5 +1,12 @@
 <h1 align="center">Backend</h1>
 
+# Task Web Application
+Our MERN stack project is a dynamic web application that allows Users to connect and manage tasks via a REStFUl web API.
+It uses MongoDB as the database for task name, description, status and date storage. It uses Express.js as a server which serves the 
+RESTFul servive over the internet. It uses the React library and Node.js runtime to run web application. The application serves Json  
+data can be consumed by any client application. 
+
+
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/{rasdidi259}/backend?color=56BEB8">
   <img alt="Github language count" src="https://img.shields.io/github/languages/count/{rasdidi259}/backend?color=56BEB8">
@@ -21,7 +28,11 @@
 
 ## :dart: About ##
 
-Describe your project
+# Task Web Application
+Our MERN stack project is a dynamic web application that allows Users to connect and manage tasks via a REStFUl web API.
+It uses MongoDB as the database for task name, description, status and date storage. It uses Express.js as a server which serves the 
+RESTFul servive over the internet. It uses the React library and Node.js runtime to run web application. The application serves Json  
+data can be consumed by any client application. 
 
 ## :sparkles: Features ##
 
@@ -31,7 +42,6 @@ Describe your project
 :heavy_check_mark: Feature 4; Delete Task
 :heavy_check_mark: Feature 5; Add New Task
 :heavy_check_mark: Feature 6; Access a Node.js Backend api of Task List management
-
 
 ## :rocket: Technologies ##
 
@@ -62,7 +72,7 @@ $ yarn
 # Run the project
 $ yarn start
 
-# The server will initialize in the <http://localhost:2000>
+# The server will initialize in the <http://localhost:3000>
 ```
 
 ## :memo: License ##

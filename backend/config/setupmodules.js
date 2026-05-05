@@ -8,10 +8,14 @@
 // Modules
 'use strict';
 
-const cookieParser = require('cookie-parser');
-const { config } = require('dotenv');
-const Joi = require('joi');
-const multer = require('multer');
+//const Joi = require('joi');
+
+// const cookieParser = require('cookie-parser');
+// const { config } = require('dotenv');
+// const joi = require('joi');
+// const multer = require('multer');
+// const swaggerJSDoc = require('swagger-jsdoc');
+// const { serve, serveFiles } = require('swagger-ui-express');
 
 module.exports = {
     ensureAuth: function(req, res, next) {
@@ -31,22 +35,21 @@ module.exports = {
     },
     bcrypt              : require('bcryptjs'),
     bodyParser          : require('body-parser'),
-    config              : require('config'),
+   // config              : require('config'),
     connectFlash        : require('connect-flash'),
     connectMongo        : require('connect-mongo'),
     cookieParser        : require('cookie-parser'),
     cors                : require('cors'),
-    //this.crossEnv    = process.env.NODE_ENV === 'production' ? 'production' : 'development',
+    dotenvx             : require('@dotenvx/dotenvx').config({path: `${process.env.NODE_ENV === 'production' ? './.env.production' : './.env.development'}`}), // Load environment
     crossSpawn          : require('cross-spawn'),
     debug               : require('debug')('app:server'),
-    dotenv              : require('dotenv'),    
     express             : require('express'),
     ExpressHandlebars   : require('express-handlebars'),
     ExpressSession      : require('express-session'),
     fawn                : require('fawn'),
     GoogleStrategy      : require('passport-google-oauth20').Strategy,
-    Joi                 : require('joi'),
-    passwordComplexity  : require('joi-password-complexity'),
+    //joi                 : require('joi'),
+    //passwordComplexity  : require('joi-password-complexity'),
     jsonwebtoken        : require('jsonwebtoken'),
     lodash              : require('lodash'),
     passport            : require('passport'),
@@ -62,7 +65,9 @@ module.exports = {
     passport            : require('passport'),
     pug                 : require('pug'),
     session             : require('express-session'),
+    swaggerJsdoc        : require('swagger-jsdoc'),
+    swaggerUi           : require('swagger-ui-express'),
+    serve               : require('swagger-ui-express').serve,
     winston             : require('winston'),
     winstonMongodb      : require('winston-mongodb')
-
 }

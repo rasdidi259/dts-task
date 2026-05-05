@@ -8,10 +8,40 @@
 const { express } = require('../config/setupmodules')
 const router = express.Router();
 const { Task, validate } = require('../model/task');
-module.exports = validateObjectId = require('../middleware/validateObjectId');
+const validateObjectId = require('../middleware/validateObjectId');
+
+//module.exports = validateObjectId = require('../middleware/validateObjectId');
 
 
 // Get all tasks
+
+/**
+ * @swagger
+ * /api/tasks:
+ *   get:
+ *     summary: Retrieve a list of all users
+ *     description: Fetches all tsk records from the database.
+ *     responses:
+ *       200:
+ *         description: A list of tasks.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: string
+ *                   title:
+ *                     type: string
+ *                   description:
+ *                     type: string
+ *                   status:
+ *                     type: string
+ *                   dueDate:
+ *                     type: date
+ */
 router.get('/', async (req, res) => {
   try {
     const tasks = await Task.find();
@@ -22,6 +52,35 @@ router.get('/', async (req, res) => {
 });
 
 // Create a new task
+
+/**
+ * @swagger
+ * /api/tasks:
+ *   post:
+ *     summary: Create a new task
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               title:
+ *                 type: string
+ *                 example: Gardening
+ *               description:
+ *                 type: string
+ *                 example: Clear the weeds from the Garden
+ *               status:
+ *                 type: string
+ *               dueDate:
+ *                 type: Date
+ *     responses:
+ *       201:
+ *         description: Task created successfully
+ *       400:
+ *         description: Invalid input data
+ */
 router.post('/', async (req, res) => {
 
   const { error } = validate(req.body);
@@ -38,7 +97,25 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Retrieve one task by ID
+
+/**
+ * @swagger
+ * /api/tasks/{id}:
+ *   get:
+ *     summary: Retreieve one task by id
+ *     parameters:
+ *      - in: path
+ *        name: id
+ *        reqquired: true
+ *        description: The unique ID of the task
+ *        schema:
+ *          type: string
+ *     responses:
+ *       200:
+ *         description: Task data retrieved successfully
+ *       404:
+ *         description: Task not found
+ */
 router.get("/:id", async (req, res) => {
   
   try {
@@ -49,7 +126,37 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// Update task status "/:id/:status"
+// Update task status "/:id/:status" /{status}:
+
+
+/**
+ * @swagger
+ * /api/tasks/{id}:
+ *   patch:
+ *     summary: Update specific fields of a task
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: The ID of the task to update
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               status:
+ *                 type: string
+ *                 example: in-progress
+ *     responses:
+ *       200:
+ *         description: Task updated successfully
+ *       404:
+ *         description: Task not found
+ */
 router.patch("/:id", async (req, res) => {
 
   try {
@@ -69,6 +176,27 @@ router.patch("/:id", async (req, res) => {
 });
 
 // Delete task
+
+/**
+ * @swagger
+ * /api/tasks/{id}:
+ *   delete:
+ *     summary: Delete a task by ID
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: The ID of the task to delete
+ *     responses:
+ *       200:
+ *         description: Task deleted successfully
+ *       404:
+ *         description: Task not found
+ *       500:
+ *         description: Server error
+ */
 router.delete("/:id", validateObjectId, async (req, res) => {
 
   const task = await Task.findByIdAndDelete(req.params.id);
