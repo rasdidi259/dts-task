@@ -5,7 +5,7 @@ It uses MongoDB as the database for task name, description, status and date stor
 RESTFul servive over the internet. It uses the React library and Node.js runtime to run web application. 
 The application displays a formatted Json data. 
 
-<h1 align="center">Frontend2</h1>
+<h1 align="center">Frontend</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/{rasdidi259}/frontend?color=56BEB8">
