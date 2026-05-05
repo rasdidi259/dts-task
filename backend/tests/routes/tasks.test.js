@@ -51,9 +51,6 @@ describe('Tasks Router', () => {
     });
 
 
-
-
-
   });
 
   describe('POST /', () => {
@@ -136,6 +133,18 @@ describe('Tasks Router', () => {
       expect(res.body.message).toBeDefined();
       expect(Task.findById).toHaveBeenCalledWith('123');  
       
+    });
+
+    it("should return a task by ID", async () => {
+      
+      const mockTask = { _id: "123", title: "Test Task" };
+      
+      // Use mockResolvedValue to return a plain object or document
+      jest.spyOn(Task, "findById").mockResolvedValue(mockTask);
+
+      const res = await request(app).get("/api/tasks/123");
+      expect(res.status).toBe(200);
+      expect(res.body.data.title).toBe("Test Task");
     });
 
   });

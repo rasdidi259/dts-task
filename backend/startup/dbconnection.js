@@ -5,11 +5,6 @@
  */
 
 
-//, winstonMongodb
-
-
-// const { MongoDB } = require('winston/lib/winston/transports');
-
 const { mongoose, winston } = require('../config/setupmodules')
 
 const dns = require('node:dns/promises');
@@ -19,11 +14,9 @@ const clientOptions = { serverApi: { version: '1', strict: true, deprecationErro
 
 // Create a MongoDB connection and check thet status
 module.exports = async function(dbUri) {
-
     try {        
         await mongoose.connect(dbUri, clientOptions);
     } catch (err) {
         winston.error('Error connecting to MongoDB:', err.message);
     }
-
 }

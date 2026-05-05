@@ -4,7 +4,6 @@
  * decription   : Task Server Application
  */
 
-// dotenv,config,dotenvx, winston
 
 const { express } = require('./config/setupmodules')
 const app = express();

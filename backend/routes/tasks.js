@@ -10,8 +10,6 @@ const router = express.Router();
 const { Task, validate } = require('../model/task');
 const validateObjectId = require('../middleware/validateObjectId');
 
-//module.exports = validateObjectId = require('../middleware/validateObjectId');
-
 
 // Get all tasks
 

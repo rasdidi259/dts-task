@@ -5,8 +5,7 @@
  */
 
 const Joi = require('joi');
-
-const { /*joi,*/  mongoose } = require("../config/setupmodules");
+const { mongoose } = require("../config/setupmodules");
 
 const taskSchema = new mongoose.Schema({
   title:{

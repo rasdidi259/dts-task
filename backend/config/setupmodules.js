@@ -8,14 +8,6 @@
 // Modules
 'use strict';
 
-//const Joi = require('joi');
-
-// const cookieParser = require('cookie-parser');
-// const { config } = require('dotenv');
-// const joi = require('joi');
-// const multer = require('multer');
-// const swaggerJSDoc = require('swagger-jsdoc');
-// const { serve, serveFiles } = require('swagger-ui-express');
 
 module.exports = {
     ensureAuth: function(req, res, next) {
@@ -35,7 +27,6 @@ module.exports = {
     },
     bcrypt              : require('bcryptjs'),
     bodyParser          : require('body-parser'),
-   // config              : require('config'),
     connectFlash        : require('connect-flash'),
     connectMongo        : require('connect-mongo'),
     cookieParser        : require('cookie-parser'),
