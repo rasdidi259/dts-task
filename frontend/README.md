@@ -1,6 +1,6 @@
 
 # Task Application
-Our MERN stack project is a dynamic web application that allows Users to connect to a REStFUl web API.
+Our MERN stack project is a dynamic web application that allows Users to connect to a RestFul web API.
 It uses MongoDB as the database for task name, description, status and date storage. It uses React which connects to a 
 RESTFul servive over the internet. It uses the React library and Node.js runtime to run web application. 
 The application displays a formatted Json data. 
@@ -29,7 +29,7 @@ The application displays a formatted Json data.
 ## :dart: About ##
 
 # Task Application
-Our MERN stack project is a dynamic web application that allows Users to connect to a REStFUl web API.
+Our MERN stack project is a dynamic web application that allows Users to connect to a RestFul web API.
 It uses MongoDB as the database for task name, description, status and date storage. It uses React which connects to a 
 RESTFul servive over the internet. It uses the React library and Node.js runtime to run web application. 
 The application displays a formatted Json data. 
