@@ -68,10 +68,10 @@ $ git clone https://github.com/{rasdidi259}/frontend
 $ cd frontend
 
 # Install dependencies
-$ yarn
+$ yarn or npm i
 
 # Run the project
-$ yarn start
+$ yarn start or npm start - to run frontend client
 
 # The server will initialize in the <http://localhost:3000>
 ```
