@@ -67,10 +67,13 @@ $ git clone https://github.com/{rasdidi259}/backend
 $ cd backend
 
 # Install dependencies
-$ yarn
+$ yarn or npm i
 
 # Run the project
-$ yarn start
+$ yarn start or 
+$ npm start - run server in production mode
+$ npm run dev - run server in development mode
+$ npm run test - run server in testing mode
 
 # The server will initialize in the <http://localhost:3000>
 ```
